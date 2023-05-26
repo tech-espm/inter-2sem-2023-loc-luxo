@@ -1,0 +1,56 @@
+<p>
+	Cadastro
+</p>
+
+<form id="formCadastro">
+	<div class="form-group">
+		<label for="nome">Nome</label>
+		<input class="form-control" type="text" id="nome" name="nome" maxlength="100" />
+	</div>
+
+	<div class="form-group">
+		<label for="email">E-mail</label>
+		<input class="form-control" type="email" id="email" name="email" maxlength="100" />
+	</div>
+
+	<div class="form-group">
+		<label for="imagem">Imagem</label>
+		<input class="form-control" type="file" id="imagem" name="imagem" accept="image/*" />
+	</div>
+
+	<button class="btn btn-primary" type="submit">
+		Cadastrar
+	</button>
+</form>
+
+<script src="/public/js/jquery-validate/jquery.validate.min.js"></script>
+<script src="/public/js/jquery-validate/additional-methods.min.js"></script>
+<script src="/public/js/jquery-validate/localization/messages_pt_BR.min.js"></script>
+
+<script>
+	async function cadastrar(form) {
+		let response = await fetch("/api/cadastrar", {
+			method: "post",
+			body: new FormData(form)
+		});
+
+		console.log(response.ok);
+	}
+
+	$("#formCadastro").validate({
+		rules: {
+			nome: {
+				required: true
+			},
+			email: {
+				required: true
+			},
+			imagem: {
+				required: true
+			}
+		},
+		submitHandler: function (form) {
+			cadastrar(form);
+		}
+	});
+</script>

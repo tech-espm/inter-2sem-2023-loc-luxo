@@ -1,3 +1,25 @@
-body {
-	
+.limitador {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+.descricao{
+    width: 300px;
+    height: 450px;
+    background-color: red;
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+}
+
+.descricao-titulo-especificacoes{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+.icone-descricao{
+    padding-top: 0.5rem;
 }
