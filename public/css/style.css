@@ -6,10 +6,13 @@
 img {
     max-width: 100%;
 }
+
+.secao-2{
+    background-image: url(https://www.google.com/search?q=wallpaper+branco&rlz=1C1FCXM_pt-PTBR997BR997&sxsrf=APwXEdfeMrgpZwe7nyOqzgAq_ROVb61m9Q:1685113536921&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjHzJiOoZP_AhWWrZUCHZpzB9QQ_AUoAXoECAEQAw&biw=1536&bih=722&dpr=1.25#imgrc=hQ_OIMsCrlAvfM);
+}
 .descricao{
     width: 300px;
     height: 450px;
-    background-color: red;
     margin-top: 2rem;
     padding-top: 0.5rem;
 }
