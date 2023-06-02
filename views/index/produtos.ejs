@@ -1,25 +1,34 @@
-<h1>Sou a página de produtos!</h1>
+<h1>Sou a página de veículos!</h1>
 
-<p>Listagem de produtos (<%= produtos.length %> produtos no total)</p>
+<p>Listagem de veículos (<%= veiculos.length %> veículos no total)</p>
 
-<% for (let contador = 0; contador < produtos.length; contador++) { %>
+<div class="container-fluid">
+	<div class="row">
 
-	<h2>
-		<%= produtos[contador].nome %>
-	</h2>
-
-	<p>
-		Id: <%= produtos[contador].id %>
-	</p>
-
-	<p>
-		Valor: R$ <%= produtos[contador].valor %>
-	</p>
-
-	<hr />
+<% for (let contador = 0; contador < veiculos.length; contador++) { %>
+	<div class="col-sm-6 col-md-4 col-lg-3">
+		<div class="card shadow my-4">
+			<div class="card-body">
+				<h2>
+					<%= veiculos[contador].nome %>
+				</h2>
+			
+				<p>
+					Id: <%= veiculos[contador].idveiculo %>
+				</p>
+			
+				<p>
+					Marca: <%= veiculos[contador].marca %>
+				</p>
+			
+				<p>
+					<img src="/public/img/veiculos/<%= veiculos[contador].idveiculo %>.jpg">
+				</p>
+			</div>
+		</div>
+	</div>
 
 <% } %>
 
-<%- contentFor("espaco-barra") %>
-
-<i>Estou na barra, também! 😊</i>
+	</div>
+</div>

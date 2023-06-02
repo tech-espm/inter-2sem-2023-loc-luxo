@@ -5,12 +5,27 @@
 <form id="formCadastro">
 	<div class="form-group">
 		<label for="nome">Nome</label>
-		<input class="form-control" type="text" id="nome" name="nome" maxlength="100" />
+		<input class="form-control" type="text" id="nome" name="nome" maxlength="50" />
 	</div>
 
 	<div class="form-group">
-		<label for="email">E-mail</label>
-		<input class="form-control" type="email" id="email" name="email" maxlength="100" />
+		<label for="marca">Marca</label>
+		<input class="form-control" type="text" id="marca" name="marca" maxlength="50" />
+	</div>
+
+	<div class="form-group">
+		<label for="modelo">Modelo</label>
+		<input class="form-control" type="text" id="modelo" name="modelo" maxlength="50" />
+	</div>
+
+	<div class="form-group">
+		<label for="cor">Cor</label>
+		<input class="form-control" type="text" id="cor" name="cor" maxlength="50" />
+	</div>
+
+	<div class="form-group">
+		<label for="ano">Ano</label>
+		<input class="form-control" type="number" id="ano" name="ano" />
 	</div>
 
 	<div class="form-group">
@@ -29,7 +44,7 @@
 
 <script>
 	async function cadastrar(form) {
-		let response = await fetch("/api/cadastrar", {
+		let response = await fetch("/criar", {
 			method: "post",
 			body: new FormData(form)
 		});
@@ -42,7 +57,16 @@
 			nome: {
 				required: true
 			},
-			email: {
+			marca: {
+				required: true
+			},
+			modelo: {
+				required: true
+			},
+			cor: {
+				required: true
+			},
+			ano: {
 				required: true
 			},
 			imagem: {
