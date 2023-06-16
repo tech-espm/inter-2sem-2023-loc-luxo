@@ -128,3 +128,29 @@ Index
     box-shadow: 0 0 11px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
 }
+
+/*Sobre*/
+#titulo-sobre{
+    text-align: center;
+    font-size: 34px;
+    padding-top: 2rem;
+}
+
+.sobre-empresa{
+    padding-top: 2rem;
+}
+.quemSomos{
+    text-align: center;
+    padding-top: 4rem;
+}
+.fotoLuiz{
+    margin-bottom: 1rem;
+}
+
+.fotoTamer{
+    margin-bottom: 1rem;
+}
+
+.links{
+    text-decoration: none;
+}
