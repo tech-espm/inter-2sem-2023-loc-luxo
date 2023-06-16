@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="secao-sobre">
+<div class="secao-sobre">
     <h1 id="titulo-sobre">SOBRE A EMPRESA</h1>
 
-    <div class="row sobre-empresa">
+    <div class="row sobre-empresa wow bounceInUp">
         <div class="col-md-6">
             <img src="/public/img/locLuxo.jpg" alt="">
         </div>
@@ -22,12 +12,11 @@
                 Ao adentrar em nossas instalações, você será imediatamente envolvido em um ambiente de elegância e requinte. A decoração luxuosa e contemporânea cria a atmosfera perfeita para iniciar sua jornada com um veículo de prestígio. Nossa equipe altamente treinada e apaixonada por automóveis estará à sua disposição, pronta para superar todas as suas expectativas e garantir que cada detalhe seja perfeito.
                 <br>
                 A frota da Loc Luxo é composta pelos carros mais exclusivos e cobiçados do mercado. De sedãs de alto desempenho a conversíveis deslumbrantes, cada veículo é escolhido a dedo para oferecer uma experiência de condução excepcional. Trabalhamos com marcas renomadas, como Rolls-Royce, Lamborghini, Ferrari, Bentley e muito mais, garantindo que você esteja no controle de um verdadeiro ícone automotivo.
-                
             </p>
         </div>
     </div>
 
-    <div class="row quemSomos">
+    <div class="row quemSomos wow bounceInUp">
         <h2>Quem somos</h2>
 
         <div class="col-md-6">
@@ -82,7 +71,15 @@
                     <a  class="links" target="_blank" href="">Contato</a>
                 </div>       
             </div>
+        </div>
     </div>
 </div>
-</body>
-</html>
+
+<script>
+    new WOW().init();
+</script>
+
+<%- contentFor("espaco-head") %>
+
+<link rel="stylesheet" type="text/css" href="/public/css/animate.min.css" />
+<script type="text/javascript" src="/public/js/wow.js"></script>
