@@ -155,4 +155,29 @@
     max-width: 80vw;
     height: 80vh;
     margin: auto;
+
+/*Sobre*/
+#titulo-sobre{
+    text-align: center;
+    font-size: 34px;
+    padding-top: 2rem;
+}
+
+.sobre-empresa{
+    padding-top: 2rem;
+}
+.quemSomos{
+    text-align: center;
+    padding-top: 4rem;
+}
+.fotoLuiz{
+    margin-bottom: 1rem;
+}
+
+.fotoTamer{
+    margin-bottom: 1rem;
+}
+
+.links{
+    text-decoration: none;
 }
