@@ -1,0 +1,172 @@
+/* Flickering Light Text Animation In CSS
+
+url: https://codemyui.com/flickering-light-text-animation-in-css/
+
+*/
+
+.openning-info-title {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.08em;
+    height: 50vh;
+    width: 30vw;
+}
+div > span {
+    opacity: 0.1;
+}
+#G {
+    opacity: 0.8;
+}
+#G::after {
+    content: '';
+    -webkit-box-shadow: -20px 5px 40px 1px rgba(255,255,255,1);
+    -moz-box-shadow: -20px 5px 40px 1px rgba(255,255,255,1);
+    box-shadow: -20px 5px 40px 1px rgba(255,255,255,1);
+}
+
+#T, #I, #U, #A, #L {
+animation: flicker1 2.0s linear reverse infinite;
+}
+#B, #E, #P, #X {
+animation: flicker2 2.4s linear reverse infinite;
+}
+#R, #S, #O, #R, #D  {
+animation: flicker3 2.7s linear reverse infinite;
+}
+
+@keyframes flicker1 {
+    0% {
+        opacity: 0.5;
+    }
+    5% {
+        opacity: 0.6;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    15% {
+        opacity: 0.85;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    30% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0.4;
+    }
+    40% {
+        opacity: 0.35;
+    }
+    45% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.85;
+    }
+    80% {
+        opacity: 0.4;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes flicker2 {
+    0% {
+        opacity: 0.45;
+    }
+    5% {
+        opacity: 0.4;
+    }
+    10% {
+        opacity: 0.55;
+    }
+    15% {
+        opacity: 0.66;
+    }
+    25% {
+        opacity: 0.55;
+    }
+    30% {
+        opacity: 0.8;
+    }
+    35% {
+        opacity: 0.4;
+    }
+    40% {
+        opacity: 0.35;
+    }
+    45% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.7;
+    }
+    70% {
+        opacity: 0.85;
+    }
+    80% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes flicker3 {
+    0% {
+        opacity: 0.55;
+    }
+    5% {
+        opacity: 0.4;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    15% {
+        opacity: 0.75;
+    }
+    25% {
+        opacity: 0.4;
+    }
+    30% {
+        opacity: 0.6;
+    }
+    35% {
+        opacity: 0.35;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    45% {
+        opacity: 0.6;
+    }
+    60% {
+        opacity: 0.8;
+    }
+    70% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
