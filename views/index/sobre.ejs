@@ -1,18 +1,101 @@
-<div class="row">
-    <div class="col-sm-6">
-        <img src="/public/img/locLuxo.jpg" />
+<div class="secao-sobre">
+    <div>
+        <h1 id="titulo-sobre">SOBRE A EMPRESA</h1>
     </div>
-    <div class="col-sm-6">
-        <p>
-            A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
-        </p>
+   
+    <div class="row sobre-empresa wow bounceInUp">
+        <div class="col-md-6">
+            <img src="/public/img/locLuxo.jpg" alt="">
+        </div>
 
-        <p>
-            As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.
-        </p>
+        <div class="col-md-6">
+            <p class="sobre-descricao">Bem-vindo à Loc Luxo, a locadora de carros de luxo que vai elevar sua experiência automotiva a um nível extraordinário. Localizada no coração da cidade, nossa empresa é o destino ideal para quem busca sofisticação, conforto e estilo incomparáveis.
+                <br>
+                Ao adentrar em nossas instalações, você será imediatamente envolvido em um ambiente de elegância e requinte. A decoração luxuosa e contemporânea cria a atmosfera perfeita para iniciar sua jornada com um veículo de prestígio. Nossa equipe altamente treinada e apaixonada por automóveis estará à sua disposição, pronta para superar todas as suas expectativas e garantir que cada detalhe seja perfeito.
+                <br>
+                A frota da Loc Luxo é composta pelos carros mais exclusivos e cobiçados do mercado. De sedãs de alto desempenho a conversíveis deslumbrantes, cada veículo é escolhido a dedo para oferecer uma experiência de condução excepcional. Trabalhamos com marcas renomadas, como Rolls-Royce, Lamborghini, Ferrari, Bentley e muito mais, garantindo que você esteja no controle de um verdadeiro ícone automotivo.
+            </p>
+        </div>
+    </div>
+    
+    <div class="secao-sobre-quem-somos">
+        <div>
+            <h2 class="titulo-quem-somos wow bounceInUp">Quem somos</h2>
+        </div>
 
-        <p>
-            And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
-        </p>
+        <div class="row quem-somos wow bounceInUp">
+
+            <div class="col-md-6">
+                <div>
+                    <h2>Gustavo Candido</h2>
+                </div>
+                <div>
+                    <img class="fotoLuiz" src="/public/img/luizGustavo.jpg" alt="Luiz Gustavo" width="500px">
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a target="_blank" href="https://github.com/gustavo-candidoo"><img src="/public/img/gitHub.png" alt="" width="40px"></a>
+                        <br>
+                        <a class="links" target="_blank" href="https://github.com/gustavo-candidoo">GitHub</a>
+                    </div>
+                    <div class="col-md-4">
+                        <a target="_blank" href="https://www.linkedin.com/in/gustavo-candido-499332198/"><img src="/public/img/linkedIn.png" alt="" width="40px"></a>
+                        <br>
+                        <a class="links" target="_blank" href="https://www.linkedin.com/in/gustavo-candido-499332198/">LinkedIn</a>
+                    </div>
+                    <div class="col-md-4">
+                        <a target="_blank" href=""><img src="/public/img/whatsApp.png" alt="" width="40px"></a> 
+                        <br>
+                        <a class="links" target="_blank" href="">Contato</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div>
+                    <h2>Guilherme Tamer</h2>
+                </div>
+                <div>
+                    <img class="fotoTamer" src="/public/img/tamer.jpg" alt="Guilherme Tamer" width="500px">
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a target="_blank" href="https://github.com/GuilhermeLotaif01"><img src="/public/img/gitHub.png" alt="" width="40px"></a> 
+                        <br>
+                        <a  class="links" target="_blank" href="https://github.com/GuilhermeLotaif01">GitHub</a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a target="_blank" href="https://www.linkedin.com/in/gustavo-candido-499332198/"> <img src="/public/img/linkedIn.png" alt="" width="40px"></a>
+                        <br>
+                        <a class="links" target="_blank" href="https://www.linkedin.com/in/gustavo-candido-499332198/">LinkedIn</a>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <img src="/public/img/whatsApp.png" alt="" width="40px">
+                        <br>
+                        <a  class="links" target="_blank" href="">Contato</a>
+                    </div>       
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+    new WOW().init();
+</script>
+
+<%- contentFor("espaco-head") %>
+
+<link rel="stylesheet" type="text/css" href="/public/css/animate.min.css" />
+<script type="text/javascript" src="/public/js/wow.js"></script>
+
+<script>
+    new WOW().init();
+</script>
+
+<%- contentFor("espaco-head") %>
+
+<link rel="stylesheet" type="text/css" href="/public/css/animate.min.css" />
+<script type="text/javascript" src="/public/js/wow.js"></script>

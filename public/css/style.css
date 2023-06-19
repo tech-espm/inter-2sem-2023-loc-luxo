@@ -167,13 +167,22 @@ img {
     font-size: 34px;
     padding-top: 2rem;
 }
-
-.sobre-empresa{
-    padding-top: 2rem;
+.titulo-quem-somos{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
-.quemSomos{
+.sobre-descricao{
+    font-family: 'Montserrat', sans-serif;
+}
+.secao-sobre-quem-somos{
     text-align: center;
     padding-top: 4rem;
+}       
+.quem-somos{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 4rem;
 }
 .fotoLuiz{
     margin-bottom: 1rem;
@@ -185,4 +194,7 @@ img {
 
 .links{
     text-decoration: none;
+    text-transform: none;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
 }
