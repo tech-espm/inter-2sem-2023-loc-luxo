@@ -7,6 +7,10 @@ body {
     margin: 0 auto;
 }
 
+img {
+    max-width: 100%;
+}
+
 .descricao{
     width: 300px;
     height: 450px;
@@ -231,6 +235,12 @@ body {
   color: #000000;
 }
 
+.central {
+    max-width: 80vw;
+    height: 80vh;
+    margin: auto;
+}
+
 /*Sobre*/
 #titulo-sobre{
     text-align: center;
@@ -241,9 +251,28 @@ body {
 .sobre-empresa{
     padding-top: 2rem;
 }
+
 .quemSomos{
     text-align: center;
     padding-top: 4rem;
+}
+
+.titulo-quem-somos{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.sobre-descricao{
+    font-family: 'Montserrat', sans-serif;
+}
+.secao-sobre-quem-somos{
+    text-align: center;
+    padding-top: 4rem;
+}       
+.quem-somos{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 4rem;
 }
 .fotoLuiz{
     margin-bottom: 1rem;
@@ -255,4 +284,7 @@ body {
 
 .links {
     text-decoration: none;
-}
+    text-transform: none;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+} 
