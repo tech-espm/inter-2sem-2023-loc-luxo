@@ -1,47 +1,44 @@
-<p>
-	Cadastro
-</p>
+<div>
+	<p>
+		Cadastro
+	</p>
 
-<form id="formCadastro">
-	<div class="form-group">
-		<label for="nome">Nome</label>
-		<input class="form-control" type="text" id="nome" name="nome" maxlength="50" />
-	</div>
+	<form id="formCadastro">
+		<div class="form-group">
+			<label for="nome">Nome</label>
+			<input class="form-control" type="text" id="nome" name="nome" maxlength="50" />
+		</div>
 
-	<div class="form-group">
-		<label for="marca">Marca</label>
-		<input class="form-control" type="text" id="marca" name="marca" maxlength="50" />
-	</div>
+		<div class="form-group">
+			<label for="marca">Marca</label>
+			<input class="form-control" type="text" id="marca" name="marca" maxlength="50" />
+		</div>
 
-	<div class="form-group">
-		<label for="modelo">Modelo</label>
-		<input class="form-control" type="text" id="modelo" name="modelo" maxlength="50" />
-	</div>
+		<div class="form-group">
+			<label for="modelo">Modelo</label>
+			<input class="form-control" type="text" id="modelo" name="modelo" maxlength="50" />
+		</div>
 
-	<div class="form-group">
-		<label for="cor">Cor</label>
-		<input class="form-control" type="text" id="cor" name="cor" maxlength="50" />
-	</div>
+		<div class="form-group">
+			<label for="cor">Cor</label>
+			<input class="form-control" type="text" id="cor" name="cor" maxlength="50" />
+		</div>
 
-	<div class="form-group">
-		<label for="ano">Ano</label>
-		<input class="form-control" type="number" id="ano" name="ano" />
-	</div>
+		<div class="form-group">
+			<label for="ano">Ano</label>
+			<input class="form-control" type="number" id="ano" name="ano" />
+		</div>
 
-	<div class="form-group">
-		<label for="imagem">Imagem</label>
-		<input class="form-control" type="file" id="imagem" name="imagem" accept="image/*" />
-	</div>
+		<div class="form-group">
+			<label for="imagem">Imagem</label>
+			<input class="form-control" type="file" id="imagem" name="imagem" accept="image/*" />
+		</div>
 
-	<button class="btn btn-primary" type="submit">
-		Cadastrar
-	</button>
-</form>
-
-<script src="/public/js/jquery-validate/jquery.validate.min.js"></script>
-<script src="/public/js/jquery-validate/additional-methods.min.js"></script>
-<script src="/public/js/jquery-validate/localization/messages_pt_BR.min.js"></script>
-
+		<button class="btn btn-primary" type="submit">
+			Cadastrar
+		</button>
+	</form>
+</div>
 <script>
 	async function cadastrar(form) {
 		let response = await fetch("/criar", {

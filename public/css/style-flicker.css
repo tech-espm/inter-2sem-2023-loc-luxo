@@ -6,8 +6,8 @@ url: https://codemyui.com/flickering-light-text-animation-in-css/
 
 .openning-info-title {
     font-family: Montserrat;
-    font-size: 40px;
-    font-weight: 600;
+    font-size: 42px;
+    font-weight: bold;
     color: white;
     letter-spacing: 0.08em;
     height: 50vh;
@@ -27,13 +27,13 @@ div > span {
 }
 
 #T, #I, #U, #A, #L {
-animation: flicker1 2.0s linear reverse infinite;
+animation: flicker1 3.2s linear reverse infinite;
 }
 #B, #E, #P, #X {
-animation: flicker2 2.4s linear reverse infinite;
+animation: flicker2 3.8s linear reverse infinite;
 }
 #R, #S, #O, #R, #D  {
-animation: flicker3 2.7s linear reverse infinite;
+animation: flicker3 4.2s linear reverse infinite;
 }
 
 @keyframes flicker1 {
