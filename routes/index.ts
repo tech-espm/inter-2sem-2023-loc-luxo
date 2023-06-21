@@ -17,7 +17,7 @@ class IndexRoute {
 		let veiculos: any[];
 
 		await app.sql.connect(async (sql: app.Sql) => {
-            veiculos = await sql.query("SELECT idveiculo, nome, marca, modelo, cor, ano FROM veiculo");
+            veiculos = await sql.query("SELECT idveiculo, marca, modelo, ano, cor, categoria FROM veiculo");
         });
 
 		res.render("index/produtos", {
@@ -32,11 +32,6 @@ class IndexRoute {
 	  
 		if (!veiculo) {
             res.status(400).json("Veículo inválido");
-			return;
-        }
-
-        if (!veiculo.nome) {
-            res.status(400).json("Nome do veículo inválido");
 			return;
         }
 
@@ -62,14 +57,14 @@ class IndexRoute {
 
 		let imagem = req.uploadedFiles["imagem"];
 		if (!imagem) {
-            res.status(400).json("Imagem do veículo inválido");
+            res.status(400).json("Imagem inválida");
 			return;
 		}
 
 		await app.sql.connect(async (sql: app.Sql) => {
             await sql.beginTransaction();
 
-            await sql.query("INSERT INTO veiculo (nome, marca, modelo, cor, ano) VALUES (?, ?, ?, ?, ?)", [veiculo.nome, veiculo.marca, veiculo.modelo, veiculo.cor, veiculo.ano]);
+            await sql.query("INSERT INTO veiculo (marca, modelo, ano, cor, categoria) VALUES (?, ?, ?, ?, ?)", [veiculo.marca, veiculo.modelo, veiculo.ano, veiculo.cor, veiculo.categoria]);
 
             let idveiculo = await sql.scalar("SELECT last_insert_id()");
 

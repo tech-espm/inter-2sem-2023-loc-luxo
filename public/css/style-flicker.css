@@ -27,13 +27,13 @@ div > span {
 }
 
 #T, #I, #U, #A, #L {
-animation: flicker1 3.2s linear reverse infinite;
+animation: flicker1 3.6s linear reverse infinite;
 }
 #B, #E, #P, #X {
-animation: flicker2 3.8s linear reverse infinite;
+animation: flicker2 4.2s linear reverse infinite;
 }
 #R, #S, #O, #R, #D  {
-animation: flicker3 4.2s linear reverse infinite;
+animation: flicker3 4.6s linear reverse infinite;
 }
 
 @keyframes flicker1 {

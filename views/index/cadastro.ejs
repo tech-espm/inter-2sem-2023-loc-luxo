@@ -1,77 +1,115 @@
-<div>
-	<p>
-		Cadastro
-	</p>
+<div class="central flex-center">
+	<div class="cadastro-container">
+		<h1 style="padding: 0 0 2rem 0;">
+			Cadastro
+		</h1>
 
-	<form id="formCadastro">
-		<div class="form-group">
-			<label for="nome">Nome</label>
-			<input class="form-control" type="text" id="nome" name="nome" maxlength="50" />
-		</div>
-
-		<div class="form-group">
-			<label for="marca">Marca</label>
-			<input class="form-control" type="text" id="marca" name="marca" maxlength="50" />
-		</div>
-
-		<div class="form-group">
-			<label for="modelo">Modelo</label>
-			<input class="form-control" type="text" id="modelo" name="modelo" maxlength="50" />
-		</div>
-
-		<div class="form-group">
-			<label for="cor">Cor</label>
-			<input class="form-control" type="text" id="cor" name="cor" maxlength="50" />
-		</div>
-
-		<div class="form-group">
-			<label for="ano">Ano</label>
-			<input class="form-control" type="number" id="ano" name="ano" />
-		</div>
-
-		<div class="form-group">
-			<label for="imagem">Imagem</label>
-			<input class="form-control" type="file" id="imagem" name="imagem" accept="image/*" />
-		</div>
-
-		<button class="btn btn-primary" type="submit">
-			Cadastrar
-		</button>
-	</form>
+		<form id="formCadastro">
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="modelo" class="cadastro-title">Marca</label>
+					<input type="text" class="form-control" id="marca" name="marca" placeholder="Ex: Volkswagen">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="modelo">Modelo</label>
+					<input type="text" class="form-control" id="modelo" name="modelo" placeholder="Ex: T-cross">
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="ano">Ano</label>
+					<input type="text" class="form-control" id="ano" name="ano" placeholder="Ex: 2020">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="cor">Cor</label>
+					<input type="text" class="form-control" id="cor" name="cor" placeholder="Ex: Preto">
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="categoria">Categoria</label>
+					<select id="categoria" class="form-control" name="categoria">
+						<option value="regular">Regular</option>
+						<option value="conforto">Conforto</option>
+						<option value="luxo">Luxo</option>
+						<option value="trilha">Trilha</option>
+						<option value="modificado">Modificado</option>
+						<option value="auto_escola">Auto escola</option>
+					</select>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="imagem">Imagem</label>
+					<div class="custom-file">
+						<input class="form-control-file" type="file" id="imagem" name="imagem" accept="image/*"/>
+						<label class="custom-file-label" for="imagem">Adicionar imagem 16x9</label>
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Confirmar</button>
+		</form>
+	</div>
 </div>
+
 <script>
-	async function cadastrar(form) {
-		let response = await fetch("/criar", {
-			method: "post",
-			body: new FormData(form)
-		});
+	const fileInput = document.getElementById('imagem')
 
-		console.log(response.ok);
+	fileInput.addEventListener('change', function(event) {
+	const file = event.target.files[0]
+	const reader = new FileReader()
+
+	reader.onload = function(event) {
+		const imageDataURL = event.target.result
+		
+		Swal.fire({
+			position: 'top-end',
+			title: 'Imagem selecionada',
+			imageUrl: imageDataURL,
+			imageAlt: 'Selected Image',
+			showConfirmButton: false,
+			imageWidth: 200,
+			imageHeight: 200,
+			timer: 2000
+		})
 	}
+	reader.readAsDataURL(file);
+	})
 
-	$("#formCadastro").validate({
-		rules: {
-			nome: {
-				required: true
-			},
-			marca: {
-				required: true
-			},
-			modelo: {
-				required: true
-			},
-			cor: {
-				required: true
-			},
-			ano: {
-				required: true
-			},
-			imagem: {
-				required: true
-			}
-		},
-		submitHandler: function (form) {
-			cadastrar(form);
+    async function cadastrar(form) {
+            const response = await fetch("/criar", {
+                method: "post",
+                body: new FormData(form),
+            })
 		}
-	});
+    $(function () {
+        const formCadastro = $("#formCadastro")
+
+        formCadastro.validate({
+            rules: {
+                marca: {
+                    required: true,
+                },
+                modelo: {
+                    required: true,
+                },
+                cor: {
+                    required: true,
+                },
+                ano: {
+                    required: true,
+                },
+                imagem: {
+                    required: true,
+                },
+            },
+            submitHandler: function (form) {
+                cadastrar(form)
+
+				Swal.fire({
+					icon: 'success',
+					title: `Veículo adicionado com sucesso`,
+  					confirmButtonColor: '#007bff',
+					timer: 3000})
+            }
+        })
+    })
 </script>

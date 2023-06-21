@@ -238,11 +238,37 @@ img {
   color: #000000;
 }
 
-/*Sobre*/
-#titulo-sobre{
+.cadastro-container {
+    width: 40vw;
+}
+
+.veiculos-title {
+    padding: 5rem 0 0 0;
+    width: 80vw;
+    margin: auto;
+}
+
+.veiculos-container {
+    padding: 10rem 0 0 0;
+    width: 90vw;
+    margin: auto;
+}
+
+.embed-responsive .card-img-top {
+    object-fit: cover;
+}
+
+/* Sobre */
+
+.secao-sobre {
+    width: 80vw;
+    margin: auto;
+}
+
+.titulo-sobre{
     text-align: center;
     font-size: 34px;
-    padding-top: 2rem;
+    padding: 8rem 0 2rem 0;
 }
 
 .sobre-empresa{

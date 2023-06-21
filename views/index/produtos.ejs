@@ -1,34 +1,27 @@
-<h1>Veículos</h1>
 
-<p>Veículos (<%= veiculos.length %> veículos no total)</p>
-
-<div class="container-fluid">
-	<div class="row">
-
-<% for (let contador = 0; contador < veiculos.length; contador++) { %>
-	<div class="col-sm-6 col-md-4 col-lg-3">
-		<div class="card shadow my-4">
-			<div class="card-body">
-				<h2>
-					<%= veiculos[contador].nome %>
-				</h2>
-			
-				<p>
-					Id: <%= veiculos[contador].idveiculo %>
-				</p>
-			
-				<p>
-					Marca: <%= veiculos[contador].marca %>
-				</p>
-			
-				<p>
-					<img src="/public/img/veiculos/<%= veiculos[contador].idveiculo %>.jpg">
-				</p>
+	<div class="veiculos-title">
+		<h1>Veículos</h1>
+		<p>Veículos no estoque: ( <%= veiculos.length %> )</p>
+	</div>
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<% for (let contador = 0; contador < veiculos.length; contador++) { %>
+			<div class="col-sm-5 col-md-5 col-lg-5">
+				<div class="card shadow my-4" style="width: 35rem;">
+					<h2><div class="card-header align-center">
+						<%= veiculos[contador].modelo %>
+					</div></h2>
+					<div class="embed-responsive embed-responsive-16by9">
+						<img class="card-img-top embed-responsive-item" src="/public/img/veiculos/<%= veiculos[contador].idveiculo %>.jpg" alt="Card image cap">
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item"> Marca: <%= veiculos[contador].marca %> </li>
+						<li class="list-group-item"> Ano: <%= veiculos[contador].ano %></li>
+						<li class="list-group-item"> Cor: <%= veiculos[contador].cor %></li>
+						<li class="list-group-item"> Categoria: <%= veiculos[contador].categoria %></li>
+					</ul>
+				</div>
 			</div>
+		<% } %>
 		</div>
 	</div>
-
-<% } %>
-
-	</div>
-</div>
