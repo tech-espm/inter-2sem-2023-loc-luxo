@@ -48,11 +48,49 @@
 			<button type="submit" class="btn btn-primary">Confirmar</button>
 		</form>
 	</div>
+<<<<<<< Updated upstream
 </div>
+=======
+
+	<div class="form-group">
+		<label for="marca">Marca</label>
+		<input class="form-control" type="text" id="marca" name="marca" maxlength="50" />
+	</div>
+
+	<div class="form-group">
+		<label for="modelo">Modelo</label>
+		<input class="form-control" type="text" id="modelo" name="modelo" maxlength="50" />
+	</div>
+
+	<div class="form-group">
+		<label for="cor">Cor</label>
+		<input class="form-control" type="text" id="cor" name="cor" maxlength="50" />
+	</div>
+
+	<div class="form-group">
+		<label for="ano">Ano</label>
+		<input class="form-control" type="number" id="ano" name="ano" />
+	</div>
+
+	<div class="form-group">
+		<label for="imagem">Imagem</label>
+		<input class="form-control" type="file" id="imagem" name="imagem" accept="image/*" />
+	</div>
+
+	<button class="btn btn-success" type="submit">
+		Cadastrar
+	</button>
+</form>
+
+<script src="/public/js/jquery-validate/jquery.validate.min.js"></script>
+<script src="/public/js/jquery-validate/additional-methods.min.js"></script>
+<script src="/public/js/jquery-validate/localization/messages_pt_BR.min.js"></script>
+>>>>>>> Stashed changes
 
 <script>
 	const fileInput = document.getElementById('imagem')
 
+<<<<<<< Updated upstream
 	fileInput.addEventListener('change', function(event) {
 	const file = event.target.files[0]
 	const reader = new FileReader()
@@ -70,6 +108,11 @@
 			imageHeight: 200,
 			timer: 2000
 		})
+=======
+		if(response.ok){
+			Swal.fire("Veículo cadastrado com sucesso.")
+		}
+>>>>>>> Stashed changes
 	}
 	reader.readAsDataURL(file);
 	})
